@@ -83,7 +83,20 @@ In the white group in the ratio of favor to opposed is 65:38 white favor more in
 ## Now with More data
 
 
-
+```{r}
+chisq.test(table2)
+chisqtestGC(table2)
+```
+ 
+The p-value is 0.00000000000000022 which is very low, so I am going to run a fisherxy test to check for more data. 
+ 
+```{r}
+fisherXY(mydata$race, mydata$cappun, confL = 0.99)
+```
+ 
+ In the fisherxy test all the p value were different and are all very low. The p value for white and black is 0.00000000000000000022. The p value for white and other is 0.002607. The p value for black and other is 0.001564. 
+ 
+ 
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
