@@ -69,10 +69,16 @@ basicCC + geom_bar(stat="identity",position = "dodge")
 
 ### Numerical Descriptive Results
 
+```{r}
+table2 <- xtabs(~cappun + race, data=mydata)
+rowPerc(table2)
+colPerc(table2)
+```
+
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-
-
+In the white group in the ratio of favor to opposed is 65:38 white favor more in their race Black ratio is 42.63. Black oppose more in their race. In other their ratio is 55:2. They seem to favor more than oppose. There is also a really high white count numerically compared to the rest. 
+  
 
 ## Now with More data
 
